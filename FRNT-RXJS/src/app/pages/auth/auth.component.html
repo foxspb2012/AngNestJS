@@ -1,0 +1,21 @@
+<div class="d-flex">
+  <p-tabView class="m-auto">
+    <p-tabPanel [cache]="isTabCaching" header="Авторизация">
+      <ng-template pTemplate="content">
+        <app-authorization
+          [inputProp]="userName"
+          [inputObj]="someObj"
+        >
+        </app-authorization>
+      </ng-template>
+    </p-tabPanel>
+    <p-tabPanel header="Регистрация">
+      <app-registration></app-registration>
+    </p-tabPanel>
+
+  </p-tabView>
+
+  <p (click)="changeProp()"></p>
+
+</div>
+<p-toast position="top-left"></p-toast>
